@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alike+Angular&family=Belleza&family=Cinzel:wght@400..900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=IM+Fell+French+Canon+SC&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Miltonian+Tattoo&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Prata&family=Style+Script&family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="box active">
+        <!-- /////login// -->
+        <div class="formBox login">
+            <form action="reg.php" id="form">
+                <h1>Login</h1>
+                <div class="loginInp">
+                    <input type="text" placeholder="Username" name="username" id="userL">
+                    <i class="bi bi-person-fill"></i>
+                    <span></span>
+                </div>
+                <div class="loginInp">
+                    <input type="text" placeholder="PassWord" name="password" id="passL">
+                    <div class="lock">
+                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-slash-fill"></i>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="forget">
+                    <a href="#">Forgot PassWord?</a>
+                </div>
+                <button class="btn">Login</button>
+                <p>or login with social platforms?</p>
+                <div class="social">
+                    <a href=""><i class="bi bi-google"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                </div>
+            </form>
+        </div>
+        <!-- ////signup// -->
+        <div class="formBox signup">
+            <form action="reg.php" id="form1">
+                <h1>Sign Up</h1>
+                <div class="loginInp">
+                    <input type="text" placeholder="Username" name="username" id="userS">
+                    <i class="bi bi-person-fill"></i>
+                    <span></span>
+                </div>
+                <div class="loginInp">
+                    <input type="text" placeholder="Email" name="email" id="email">
+                    <i class="bi bi-envelope-fill"></i>
+                    <span></span>
+                </div>
+                <div class="loginInp">
+                    <input type="text" placeholder="PassWord" name="password" id="passS">
+                    <i class="bi bi-lock-fill"></i>
+                    <span></span>
+                    <p></p>
+                </div>
+                <button class="btn">Sign Up</button>
+                <p>or sign up with social platforms?</p>
+                <div class="social">
+                    <a href=""><i class="bi bi-google"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-github"></i></a>
+                </div>
+            </form>
+        </div>
+        <!-- ///////////////////////toggle box//// -->
+        <div class="toggleBox">
+            <div class="togglePanel toggleLeft">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button class="btn signupBtn">Sign Up</button>
+
+            </div>
+            <div class="togglePanel toggleRight">
+                <h1>Welcome Back!</h1>
+                <p> Already have an account?</p>
+                <button class="btn LoginBtn">Login</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- ///////////footer/// -->
+    <footer>
+        <p>
+            Coded By <a href="https://www.linkedin.com/in/fateme-abdolmaleki/">FatemeAbdolmaleki</a>&<a
+                href="https://www.linkedin.com/in/zahra-karami-7643ba231/">ZahraKarami</a>&<a
+                href="https://www.linkedin.com/in/parnian-karimian-a73855285/">ParnianKarimian</a>&<a
+                href="https://www.linkedin.com/in/mobina-lazemi-234683320/">MobinaLazemi</a>
+        </p>
+    </footer>
+</body>
+<script src="assets/js/master.js"></script>
+
+</html>

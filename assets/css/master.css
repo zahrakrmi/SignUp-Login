@@ -1,0 +1,251 @@
+*,*::after,*::before{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Prata", serif;
+    background-image: linear-gradient(-20deg, #dcb0ed 0%, #99c99c 100%);
+    
+}
+.box{
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.301);
+    overflow: hidden;
+    >.formBox{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        right: 0;
+        display: flex;
+        align-items: center;
+        color: #333;
+        text-align: center;
+        padding: 40px;
+        z-index: 1;
+        transition: .6s ease-in-out 1.2s,visibility 0s 1s ;
+        >form{
+            width: 100%;
+            >h1{
+                font-size: 36px;
+                margin: -10px 0px;
+            }
+            >.loginInp{
+                position: relative;
+                margin: 30px 0;
+                >input{
+                    width: 100%;
+                    padding: 13px 50px 13px 20px;
+                    background-color:#88888845;
+                    border-radius: 8px;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    color: #333;
+                    font-weight: 500;
+                    &::placeholder{
+                        color: #888;
+                        font-weight: 400;
+                    }
+                }
+                >i{
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                    color: #888;
+
+                }
+                >span{
+                    display: flex;
+                    width: 100%;
+                    padding: 5px;
+                    color: red;
+                    /* border: 1px solid black; */
+                }
+                >p{
+                    position: absolute;
+                    right: 20px;
+                    top: 52px;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    /* color: rgb(239, 239, 104); */
+                }
+                >.lock{
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                    color: #888;
+                    cursor: pointer;
+                    >i{
+                        position: absolute;
+                        right: 0px;
+                        top: 0;
+                        transform: translateY(-50%);
+                        &:nth-of-type(2){
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+            >.forget{
+                margin: -15px 0 15px ;
+                display: flex;
+                justify-content: center;
+                >a{
+                    display: flex;
+                    font-size: 15px;
+                    color: #333;
+                    text-decoration: none;
+
+                }
+            }
+            >p{
+                font-size: 14px;
+                margin: 15px 0 ;
+
+            }
+            >.social{
+                display:inline-flex;
+                border-radius: 8px;
+                font-size: 24px;
+                color: #333;
+                text-decoration: none;
+                >a{
+                    display: flex;
+                    margin-inline: 5px;
+                    color: inherit;
+                }
+
+            }
+        }
+    }
+    >.signup{
+        visibility: hidden;
+
+    }
+}
+.btn{
+    width: 100%;
+    height: 48px;
+    background-color: #99c99c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.269);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+
+}
+.toggleBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        background-color: #99c99c;
+        /* border: 2px solid red; */
+        z-index: 2;
+        left: -250%;
+        border-radius: 150px;
+        transition: 2s ease-in-out;
+
+    }
+    
+}
+.togglePanel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* background-color: gray; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: 2;
+    transition:.6s ease-in-out ;
+    >p{
+        margin-bottom:20px ;
+    }
+    >.btn{
+        width: 160px;
+        height: 46px;
+        background-color: transparent;
+        border: 2px solid white;
+        box-shadow: none;
+    }
+}
+.toggleRight{
+    right: -50%;
+    transition-delay: .6s;
+
+}
+.toggleLeft{
+    left: 0;
+    transition-delay: 1.2s;
+}
+.active{
+    >.toggleBox::before{
+        left: 50%;
+    }
+    >.toggleBox{
+        >.toggleLeft{
+            left: -50%;
+            transition-delay:.6s ;
+        }
+        >.toggleRight{
+            right: 0;
+            transition-delay:1.2s ;
+        }
+    }
+    >.formBox{
+        right: 50%;
+       
+    }
+    >.signup{
+        visibility: visible;
+    }
+   
+}
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    >p{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(71, 68, 68);
+        >a{
+            text-transform: capitalize;
+            display: flex;
+            margin-inline: 10px;
+            text-decoration: none;
+           color: inherit;
+            transition: .4s;
+            
+            &:hover{
+                text-decoration: 1px solid underline;
+                color: #407944;
+            }
+        }
+    }
+
+}
